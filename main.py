@@ -18,7 +18,7 @@ def main():
         scelta = menu()
 
         if scelta == "1":
-            nuovo_nome = input("Inserisci il nuovo nome del centro fieristico: ")
+            nuovo_nome = input("Inseriscii il nuovo nome del centro fieristico: ")
             lingotto.nome = nuovo_nome
 
         elif scelta == "2":

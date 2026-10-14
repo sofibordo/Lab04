@@ -57,7 +57,7 @@ class LingottoFiere:
         if codice_espositore not in self.__espositori:
             raise ValueError(f"Errore, l'espositore {codice_espositore} non esiste")
 
-        # Dato che esistono, ricaviamo gli oggetti
+
         stand = self.__stand[codice_stand]
         espositore = self.__espositori[codice_espositore]
 
@@ -67,7 +67,7 @@ class LingottoFiere:
         if espositore.stand is not None:
             raise ValueError(f"Errore, l'espositore {codice_espositore} ha già uno stand")
 
-        # Finalmente tutto a posto
+
         stand.assegna_espositore(espositore)
         espositore.stand = stand
 

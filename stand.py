@@ -5,7 +5,6 @@ class Stand:
         self.__padiglione = padiglione
         self.__prezzo_base = prezzo_base
 
-        # Dato che 'Ogni stand deve mantenere un riferimento all'espositore a cui è stato assegnato.'
         self.__espositore = None
         self.__disponibile = True
 
@@ -24,8 +23,7 @@ class Stand:
     # No setter individuale, uno per entrambi
     def assegna_espositore(self, espositore):
         self.__espositore = espositore
-        self.__disponibile = False  # Perché non è più disponibile (abbiamo assegnato espositore)
-
+        self.__disponibile = False
     @property
     def prezzo(self):
         return self.__prezzo_base
@@ -40,11 +38,10 @@ class Stand:
 
     @property
     def dettagli_extra(self):
-        return ""  # Uno stand Standard non ha proprietà extra
+        return ""
 
     def __str__(self):
-        # stato = "Disponibile" if self.__disponibile else "Non disponibile"
-        # uguale a dire
+
         if self.__disponibile:
             stato = "Disponibile"
         else:
@@ -53,8 +50,7 @@ class Stand:
         return f"{self.__codice}: {self.tipologia} | {self.__superficie} mq - Padiglione {self.__padiglione} - Prezzo {self.prezzo:.2f}€ {self.dettagli_extra}- {stato}"
 
     def __repr__(self):
-        # stato = "Disponibile" if self.__disponibile else "Non disponibile"
-        # uguale a dire
+
         if self.__disponibile:
             stato = "Disponibile"
         else:
